@@ -134,6 +134,28 @@ body:not(:has(#loginPage:not(.hide))) .skinHeader {
 .layout-mobile .detailImageContainer .card.portraitCard {
   display: none !important;
 }
+#loginPage {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.5)),
+    url(https://cdn.jsdelivr.net/gh/zoravar08/zombie-release@main/img/loginImg/login.jpg);
+  background-position: top left;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: 150s infinite alternate backgroundAnimation;
+  z-index: 2;
+  overflow: hidden;
+}
+#loginPage .raised.cancel.block.btnForgotPassword.emby-button {
+  display: none;
+}
+div#loginPage {
+  margin-top: 0 !important;
+}
+.manualLoginForm {
+  height: 100%;
+  width: 100%;
+}
 .layout-mobile .listItem-content .listItemImage-large {
   -webkit-tap-highlight-color: #fff0;
 }
@@ -144,6 +166,11 @@ body:not(:has(#loginPage:not(.hide))) .skinHeader {
 .backdropImage {
   filter: blur(5px) saturate(120%) contrast(120%) brightness(50%);
   animation: 0.2s ease-in-out both backdrop-fadein;
+}
+.layout-mobile .backgroundContainer,
+.layout-desktop .backgroundContainer {
+  background: url(https://cdn.jsdelivr.net/gh/stpnwf/ZestyTheme@latest/images/gradients/blue.png)
+    no-repeat center center;
 }
 .sectionTitleContainer-cards {
   margin: 0;
@@ -544,10 +571,10 @@ a[href*="anidb.net"] {
 }
 .adminDrawerLogo img,
 imgLogoIcon {
-  content: url(https://imgur.com/hNcxrRJ.png) !important;
+  content: url(https://cdn.jsdelivr.net/gh/zoravar08/zombie-release@main/logo/jellyfin-logo-light.png) !important;
 }
 .pageTitleWithLogo {
-  background-image: url(https://imgur.com/hNcxrRJ.png) !important;
+  background-image: url(https://cdn.jsdelivr.net/gh/zoravar08/zombie-release@main/logo/jellyfin-logo-light.png) !important;
 }
 #txtCustomCss,
 #txtLocalCustomCss {
@@ -2724,7 +2751,10 @@ layout-mobile .detailPagePrimaryContent {
   }
 }
 @media (orientation: landscape) {
-
+  .layout-mobile .backgroundContainer {
+    background: url(https://cdn.jsdelivr.net/gh/stpnwf/ZestyTheme@latest/images/gradients/blue.png)
+      no-repeat center center;
+  }
   .layout-mobile .itemBackdrop {
     display: block;
     background-attachment: fixed;

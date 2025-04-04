@@ -554,10 +554,10 @@ a[href*="anidb.net"] {
 }
 .adminDrawerLogo img,
 imgLogoIcon {
-  content: url(https://cdn.jsdelivr.net/gh/zoravar08/MBCtheme@main/logo/mcblogo.png) !important;
+  content: url(https://cdn.jsdelivr.net/gh/zoravar08/MBCtheme@main/logo/mcblogo1.png) !important;
 }
 .pageTitleWithLogo {
-  background-image: url(https://cdn.jsdelivr.net/gh/zoravar08/MBCtheme@main/logo/mcblogo.png) !important;
+  background-image: url(https://cdn.jsdelivr.net/gh/zoravar08/MBCtheme@main/logo/mcblogo1.png) !important;
 }
 #txtCustomCss,
 #txtLocalCustomCss {

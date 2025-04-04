@@ -554,10 +554,10 @@ a[href*="anidb.net"] {
 }
 .adminDrawerLogo img,
 imgLogoIcon {
-  content: url(https://cdn.jsdelivr.net/gh/zoravar08/zombie-release@main/logo/jellyfin-logo-light.png) !important;
+  content: url(https://cdn.jsdelivr.net/gh/zoravar08/MBCtheme@main/logo/mcblogo.png) !important;
 }
 .pageTitleWithLogo {
-  background-image: url(https://cdn.jsdelivr.net/gh/zoravar08/zombie-release@main/logo/jellyfin-logo-light.png) !important;
+  background-image: url(https://cdn.jsdelivr.net/gh/zoravar08/MBCtheme@main/logo/mcblogo.png) !important;
 }
 #txtCustomCss,
 #txtLocalCustomCss {
@@ -2734,10 +2734,6 @@ layout-mobile .detailPagePrimaryContent {
   }
 }
 @media (orientation: landscape) {
-  .layout-mobile .backgroundContainer {
-    background: url(https://cdn.jsdelivr.net/gh/stpnwf/ZestyTheme@latest/images/gradients/blue.png)
-      no-repeat center center;
-  }
   .layout-mobile .itemBackdrop {
     display: block;
     background-attachment: fixed;

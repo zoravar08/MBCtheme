@@ -1881,7 +1881,7 @@ div.mainDrawer.transition.touch-menu-la {
 div.mainDrawer.transition.touch-menu-la.drawer-open {
   width: 300px !important;
   left: -300px !important;
-  transform: translateX(340px) !important;
+  transform: translateX(300px) !important;
 }
 .toast {
   background-color: rgba(var(--accent-off), 0.75) !important;

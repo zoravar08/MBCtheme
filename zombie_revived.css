@@ -1875,11 +1875,11 @@ a[data-role="button"]:hover {
   border-bottom-right-radius: var(--rounding-large) !important;
 }
 div.mainDrawer.transition.touch-menu-la {
-  width: 320px !important;
+  width: 300px !important;
   left: -340px !important;
 }
 div.mainDrawer.transition.touch-menu-la.drawer-open {
-  width: 320px !important;
+  width: 300px !important;
   left: -340px !important;
   transform: translateX(340px) !important;
 }

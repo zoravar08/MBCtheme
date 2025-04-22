@@ -648,7 +648,8 @@ imgLogoIcon {
   background: unset !important;
 }
 .emby-tab-button-active {
-  background-color: rgb(var(--accent)) !important;
+  background-color: #EAAA00 !important;
+  color: white !important;
   border-radius: var(--rounding-circle) !important;
 }
 .layout-mobile .headroom--unpinned {

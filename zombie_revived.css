@@ -609,7 +609,7 @@ imgLogoIcon {
 }
 .homeLibraryText,
 .emby-button-foreground {
-  color: rgb(var(--honey-yellow));
+  color: rgb(var(--accent));
 }
 #indexPage .homeLibraryButton,
 .emby-tab-button {
@@ -630,12 +630,12 @@ imgLogoIcon {
 }
 .raised:hover .homeLibraryText,
 .emby-tab-button:hover .emby-button-foreground {
-  color: rgb(var(--honey-yellow) !important;
+  color: rgb(var(--accent) !important;
   transition: 100ms;
 }
 #indexPage .homeLibraryButton:hover,
 .emby-tab-button:hover {
-  background-color: rgba(var(--honey-yellow), 0.5) !important;
+  background-color: rgba(var(--accent), 0.5) !important;
   border-radius: var(--rounding-circle) !important;
 }
 .raised.homeLibraryButton.emby-button:hover,
@@ -648,7 +648,7 @@ imgLogoIcon {
   background: unset !important;
 }
 .emby-tab-button-active {
-  background-color: rgb(var(--honey-yellow)) !important;
+  background-color: rgb(var(--accent)) !important;
   border-radius: var(--rounding-circle) !important;
 }
 .layout-mobile .headroom--unpinned {

@@ -134,6 +134,18 @@ body:not(:has(#loginPage:not(.hide))) .skinHeader {
 .layout-mobile .detailImageContainer .card.portraitCard {
   display: none !important;
 }
+#loginPage {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.5)),
+    url(https://cdn.jsdelivr.net/gh/zoravar08/zombie-release@main/img/loginImg/login.jpg);
+  background-position: top left;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: 150s infinite alternate backgroundAnimation;
+  z-index: 2;
+  overflow: hidden;
+}
 #loginPage .raised.cancel.block.btnForgotPassword.emby-button {
   display: none;
 }
@@ -154,6 +166,11 @@ div#loginPage {
 .backdropImage {
   filter: blur(5px) saturate(120%) contrast(120%) brightness(50%);
   animation: 0.2s ease-in-out both backdrop-fadein;
+}
+.layout-mobile .backgroundContainer,
+.layout-desktop .backgroundContainer {
+  background: url(https://cdn.jsdelivr.net/gh/stpnwf/ZestyTheme@latest/images/gradients/blue.png)
+    no-repeat center center;
 }
 .sectionTitleContainer-cards {
   margin: 0;
@@ -554,10 +571,10 @@ a[href*="anidb.net"] {
 }
 .adminDrawerLogo img,
 imgLogoIcon {
-  content: url(https://cdn.jsdelivr.net/gh/zoravar08/MBCtheme@main/logo/mcblogo1.png) !important;
+  content: url(https://cdn.jsdelivr.net/gh/zoravar08/zombie-release@main/logo/jellyfin-logo-light.png) !important;
 }
 .pageTitleWithLogo {
-  background-image: url(https://cdn.jsdelivr.net/gh/zoravar08/MBCtheme@main/logo/mcblogo1.png) !important;
+  background-image: url(https://cdn.jsdelivr.net/gh/zoravar08/zombie-release@main/logo/jellyfin-logo-light.png) !important;
 }
 #txtCustomCss,
 #txtLocalCustomCss {
@@ -609,7 +626,7 @@ imgLogoIcon {
 }
 .homeLibraryText,
 .emby-button-foreground {
-  color: rgb(var(--accent));
+  color: rgb(var(--darkest));
 }
 #indexPage .homeLibraryButton,
 .emby-tab-button {
@@ -630,7 +647,7 @@ imgLogoIcon {
 }
 .raised:hover .homeLibraryText,
 .emby-tab-button:hover .emby-button-foreground {
-  color: rgb(var(--accent) !important;
+  color: rgb(var(--darkest)) !important;
   transition: 100ms;
 }
 #indexPage .homeLibraryButton:hover,
@@ -837,7 +854,7 @@ imgLogoIcon {
   display: none;
 }
 .starIcon {
-  color: rgba(var(--accent), 0.8);
+  color: rgba(var(--honey-yellow), 0.8);
 }
 .mediaInfoOfficialRating {
   border-radius: 5px;
@@ -1875,13 +1892,13 @@ a[data-role="button"]:hover {
   border-bottom-right-radius: var(--rounding-large) !important;
 }
 div.mainDrawer.transition.touch-menu-la {
-  width: 300px !important;
-  left: -300px !important;
+  width: 320px !important;
+  left: -340px !important;
 }
 div.mainDrawer.transition.touch-menu-la.drawer-open {
-  width: 300px !important;
-  left: -300px !important;
-  transform: translateX(300px) !important;
+  width: 320px !important;
+  left: -340px !important;
+  transform: translateX(340px) !important;
 }
 .toast {
   background-color: rgba(var(--accent-off), 0.75) !important;
@@ -2734,6 +2751,10 @@ layout-mobile .detailPagePrimaryContent {
   }
 }
 @media (orientation: landscape) {
+  .layout-mobile .backgroundContainer {
+    background: url(https://cdn.jsdelivr.net/gh/stpnwf/ZestyTheme@latest/images/gradients/blue.png)
+      no-repeat center center;
+  }
   .layout-mobile .itemBackdrop {
     display: block;
     background-attachment: fixed;

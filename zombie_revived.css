@@ -220,10 +220,10 @@ div#loginPage {
   color: rgb(var(--dark));
 }
 .emby-button.show-focus:focus {
-  background: rgba(var(--accent), 0.5) !important;
+  background: rgba(var(--honey-yellow), 0.5) !important;
 }
 .paper-icon-button-light.show-focus:focus {
-  color: rgba(var(--accent)) !important;
+  color: rgba(var(--honey-yellow)) !important;
 }
 button-flat:hover {
   color: rgba(var(--accent)) !important;
@@ -609,7 +609,7 @@ imgLogoIcon {
 }
 .homeLibraryText,
 .emby-button-foreground {
-  color: rgb(var(--darkest));
+  color: rgb(var(--honey-yellow));
 }
 #indexPage .homeLibraryButton,
 .emby-tab-button {
@@ -630,12 +630,12 @@ imgLogoIcon {
 }
 .raised:hover .homeLibraryText,
 .emby-tab-button:hover .emby-button-foreground {
-  color: rgb(var(--darkest)) !important;
+  color: rgb(var(--honey-yellow) !important;
   transition: 100ms;
 }
 #indexPage .homeLibraryButton:hover,
 .emby-tab-button:hover {
-  background-color: rgba(var(--accent), 0.5) !important;
+  background-color: rgba(var(--honey-yellow), 0.5) !important;
   border-radius: var(--rounding-circle) !important;
 }
 .raised.homeLibraryButton.emby-button:hover,

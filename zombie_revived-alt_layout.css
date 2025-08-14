@@ -1392,14 +1392,14 @@ layout-mobile .detailPagePrimaryContent {
   color: #fff0 !important;
   margin: 1.5em 0 !important;
 }
-/* Logo for admin drawer and icon logo: https://i.imgur.com/hNcxrRJ.png */
+/* Logo for admin drawer and icon logo */
 .adminDrawerLogo img,
 .imgLogoIcon {
-  content: url(https://i.imgur.com/hNcxrRJ.png) !important;
+  content: url(https://cdn.jsdelivr.net/gh/MakD/zombie-release@main/logo/jellyfin-logo-light.png) !important;
 }
-/* Logo for page titles: https://i.imgur.com/hNcxrRJ.png */
+/* Logo for page titles */
 .pageTitleWithLogo {
-  background-image: url(https://i.imgur.com/hNcxrRJ.png) !important;
+  background-image: url(https://cdn.jsdelivr.net/gh/MakD/zombie-release@main/logo/jellyfin-logo-light.png) !important;
 }
 #txtCustomCss,
 #txtLocalCustomCss {

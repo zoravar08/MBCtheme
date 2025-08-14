@@ -113,7 +113,7 @@ body:not(:has(#loginPage:not(.hide))) .skinHeader {
   max-width: 22em;
 }
 #loginPage .padded-left.padded-right.padded-bottom-page {
-  margin-top: 4em !important;
+  margin-top: 50px !important; /* was 10px */
   margin-left: auto;
   margin-right: auto;
   backdrop-filter: blur(1px);
@@ -138,9 +138,8 @@ body:not(:has(#loginPage:not(.hide))) .skinHeader {
 #loginPage {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.5)),
-    url(https://cdn.jsdelivr.net/gh/MakD/zombie-release@main/img/loginImg/login.jpg);
-  background-position: top left;
+  background-image: url('/Branding/Splashscreen?format=jpg&foregroundLayer=0.15'); /* was cdn image with gradient */
+  background-position: center; /* was top left */
   background-size: cover;
   background-attachment: fixed;
   animation: 150s infinite alternate backgroundAnimation;
@@ -243,8 +242,8 @@ div#loginPage {
 .paper-icon-button-light.show-focus:focus {
   color: rgb(var(--accent)) !important; /* was rgba(var(--accent)) */
 }
-button-flat:hover {
-  color: rgba(var(--accent)) !important;
+.button-flat:hover {
+  color: rgb(var(--accent)) !important; /* was rgba(var(--accent)) */
 }
 .raised:hover,
 .fab:hover,
@@ -572,10 +571,10 @@ a[href*="anidb.net"] {
 }
 .adminDrawerLogo img,
 imgLogoIcon {
-  content: url(https://cdn.jsdelivr.net/gh/MakD/zombie-release@main/logo/jellyfin-logo-light.png) !important;
+  content: url(https://i.imgur.com/7BLwDEU.png) !important; /* was MakD CDN */
 }
 .pageTitleWithLogo {
-  background-image: url(https://cdn.jsdelivr.net/gh/MakD/zombie-release@main/logo/jellyfin-logo-light.png) !important;
+  background-image: url('/web/logo.png') !important; /* local logo for page title */
 }
 #txtCustomCss,
 #txtLocalCustomCss {
@@ -743,7 +742,7 @@ imgLogoIcon {
 .layout-desktop .backgroundContainer {
   background-size: cover !important;
   position: fixed;
-  opacity: 100%;
+  opacity: 1; /* was 100% */
 }
 .layout-tv .backgroundContainer .layout-desktop .backgroundContainer {
   position: fixed;
@@ -1123,21 +1122,21 @@ a[data-role="button"]:hover {
 }
 .css-13s45j6 {
   border-radius: 10px;
-  background-color: rgba(var(--darkest)) !important;
+  background-color: rgb(var(--darkest)) !important;
 }
 .css-1vrqlyr {
-  border-bottom: 1px solid rgba(var(--dark-highlight));
+  border-bottom: 1px solid rgb(var(--dark-highlight)); /* was rgba(var(--dark-highlight)) */
   text-align: left;
 }
 .css-1aaapa3 {
-  background-color: rgba(var(--darkest));
+  background-color: rgb(var(--darkest)); /* was rgba(var(--darkest)) */
 }
 .css-t802yl {
   backdrop-filter: blur(4px);
   background-color: rgba(var(--accent), 0.1);
 }
 .css-1295fc2 {
-  background-color: rgba(var(--darkest));
+  background-color: rgb(var(--darkest)); /* was rgba(var(--darkest)) */
 }
 .css-68rqdf {
   color: rgba(var(--accent));
@@ -1195,7 +1194,7 @@ a[data-role="button"]:hover {
   color: rgb(var(--accent));
 }
 .css-1p1d6ke {
-  background-color: rgba(var(--darkest));
+  background-color: rgb(var(--darkest));
 }
 .css-667gdg.Mui-selected:hover {
   background-color: rgba(var(--accent), 0.28);
@@ -1393,7 +1392,7 @@ a[data-role="button"]:hover {
 }
 /* Fix missing dot and color function */
 .button-flat:hover {
-  color: rgb(var(--accent)) !important; /* was 'button-flat:hover' + rgba(...) */
+  color: rgb(var(--accent)) !important; /* was rgba(var(--accent)) */
 }
 
 /* Remove duplicate mdl-slider-background-lower by keeping a single rule.
@@ -1430,7 +1429,7 @@ a[data-role="button"]:hover {
 /* Ensure Jellyfin logos apply regardless of class/id used */
 #imgLogoIcon,
 .imgLogoIcon {
-  content: url(https://imgur.com/a/7BLwDEU.png) !important;
+  content: url(https://i.imgur.com/7BLwDEU.png) !important;
 }
 /* ...existing code... */
 

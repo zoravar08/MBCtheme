@@ -2547,7 +2547,7 @@ layout-mobile .detailPagePrimaryContent {
 .nowPlayingPageImage,
 .upNextDialog-poster-img,
 .layout-tv .upNextContainer {
-  border-radius: 48px !important;
+  border-radius: 20px !important;
 }
 .layout-tv .itemProgressBar {
   backdrop-filter: blur(8px);

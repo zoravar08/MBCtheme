@@ -2732,7 +2732,13 @@ layout-mobile .detailPagePrimaryContent {
 }
 
 /* ==== CARD STYLES ==== */
-.cardBox:hover {
+/* Smooth hover movement */
+.cardBox {
+  transition: transform 150ms ease;
+}
+
+/* Trigger lift when the card (parent) is hovered */
+.card:hover .cardBox {
   transform: translateY(-3px);
 }
 

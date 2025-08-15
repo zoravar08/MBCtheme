@@ -1395,11 +1395,11 @@ layout-mobile .detailPagePrimaryContent {
 /* Logo for admin drawer and icon logo */
 .adminDrawerLogo img,
 .imgLogoIcon {
-  content: url(https://cdn.jsdelivr.net/gh/zoravar08/MBCtheme@master/logo/logo_white.png) !important;
+  content: url(https://cdn.jsdelivr.net/gh/zoravar08/MBCtheme@main/logo/logo_white.png) !important;
 }
 /* Logo for page titles */
 .pageTitleWithLogo {
-  background-image: url(https://cdn.jsdelivr.net/gh/zoravar08/MBCtheme@master/logo/logo_white.png) !important;
+  background-image: url(https://cdn.jsdelivr.net/gh/zoravar08/MBCtheme@main/logo/logo_white.png) !important;
 }
 #txtCustomCss,
 #txtLocalCustomCss {

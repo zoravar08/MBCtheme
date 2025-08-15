@@ -23,6 +23,9 @@ h4 {
   --rounding-alt: 9px;
   --rounding-large: 24px;
   --rounding-circle: 100px;
+
+  /* Added: used later but previously undefined */
+  --deep-blue: 30, 136, 229;
 }
 .backgroundContainer {
   background-color: rgba(var(--accent), 0.17) !important;
@@ -242,8 +245,8 @@ div#loginPage {
 .paper-icon-button-light.show-focus:focus {
   color: rgba(var(--accent)) !important;
 }
-button-flat:hover {
-  color: rgba(var(--accent)) !important;
+.button-flat:hover {
+  color: rgb(var(--accent)) !important;
 }
 .raised:hover,
 .fab:hover,
@@ -570,7 +573,8 @@ a[href*="anidb.net"] {
   margin: 1.5em 0 !important;
 }
 .adminDrawerLogo img,
-imgLogoIcon {
+.imgLogoIcon,
+#imgLogoIcon {
   content: url(https://cdn.jsdelivr.net/gh/MakD/zombie-release@main/logo/jellyfin-logo-light.png) !important;
 }
 .pageTitleWithLogo {
@@ -783,15 +787,8 @@ imgLogoIcon {
   padding-bottom: 0vh !important;
 }
 .layout-desktop a.overview-expand.emby-button {
-  margin: none;
-  padding: none;
-}
-.layout-desktop .itemName,
-.layout-mobile .itemName {
-  font-weight: 400;
-}
-.infoWrapper {
-  margin-bottom: 3vh;
+  margin: 0;
+  padding: 0;
 }
 .layout-desktop .btnShuffle,
 .layout-desktop .listViewUserDataButtons,
@@ -2524,31 +2521,31 @@ layout-mobile .detailPagePrimaryContent {
 .layout-tv .raised,
 .layout-tv .itemSelectionPanel,
 .layout-tv .cardContent-button,
-.layout-tv .cardContent-shadow,
-.layout-tv .itemDetailImage,
-.layout-tv .cardImageContainer,
-.layout-tv .cardPadder,
-.layout-tv .listItemImage,
-.layout-tv .listItemButton,
-.layout-tv .headerButton,
-.layout-tv .innerCardFooter,
-.layout-tv .blurhash-canvas,
-.layout-tv .dialog,
-.layout-tv .countIndicator,
-.layout-tv .playedIndicator,
-.layout-tv .listItemIcon,
-.layout-tv .listItem-border,
-.layout-tv .button-flat,
-.layout-tv .visualCardBox,
-.layout-tv .emby-select-withcolor,
-.layout-tv .chapterThumbTextContainer,
-.layout-tv .chapterThumbContainer,
-.layout-tv .chapterThumb,
-.layout-tv .emby-input,
-.layout-tv .emby-textarea,
-.layout-tv .emby-select-withcolor,
-.layout-tv .nowPlayingPageImage,
-.layout-tv .upNextDialog-poster-img,
+.cardContent-shadow,
+.itemDetailImage,
+.cardImageContainer,
+.cardPadder,
+.listItemImage,
+.listItemButton,
+.headerButton,
+.innerCardFooter,
+.blurhash-canvas,
+.dialog,
+.countIndicator,
+.playedIndicator,
+.listItemIcon,
+.listItem-border,
+.button-flat,
+.visualCardBox,
+.emby-select-withcolor,
+.chapterThumbTextContainer,
+.chapterThumbContainer,
+.chapterThumb,
+.emby-input,
+.emby-textarea,
+.emby-select-withcolor,
+.nowPlayingPageImage,
+.upNextDialog-poster-img,
 .layout-tv .upNextContainer {
   border-radius: 20px !important;
 }
@@ -2725,277 +2722,24 @@ layout-mobile .detailPagePrimaryContent {
   font-size: 1.75em;
   font-weight: 600;
 }
-@media all and (min-width: 50em) {
-  #specialsCollapsible .emby-scroller,
-  #musicVideosCollapsible.emby-scroller,
-  #scenesCollapsible.emby-scroller {
-    margin-right: 0;
-  }
-  #specialsCollapsible .emby-scrollbuttons,
-  #musicVideosCollapsible .emby-scrollbuttons,
-  #scenesCollapsible .emby-scrollbuttons {
-    display: none;
-  }
-  #specialsCollapsible .itemsContainer,
-  #musicVideosCollapsible .itemsContainer,
-  #scenesCollapsible .itemsContainer {
-    flex-wrap: wrap;
-  }
-  #specialsCollapsible .overflowBackdropCard,
-  #musicVideosCollapsible .overflowBackdropCard,
-  #scenesCollapsible .overflowBackdropCard {
-    max-width: 13.4vw !important;
-  }
-  .verticalSection.section0 .textActionButton {
-    display: none;
-  }
+
+/* ==== LOGIN PAGE ==== */
+/* Login page background */
+#loginPage {
+  background-image: url('/Branding/Splashscreen?format=jpg&foregroundLayer=0.15') !important;
+  background-position: center !important;
+  background-size: cover !important;
 }
-@media (orientation: landscape) {
-  .layout-mobile .backgroundContainer {
-    background: url(https://cdn.jsdelivr.net/gh/stpnwf/ZestyTheme@latest/images/gradients/blue.png)
-      no-repeat center center;
-  }
-  .layout-mobile .itemBackdrop {
-    display: block;
-    background-attachment: fixed;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh !important;
-    position: fixed !important;
-    top: 0;
-    margin-top: 0;
-    left: 0;
-    width: 100%;
-    filter: blur(2px) saturate(120%) contrast(120%) brightness(50%);
-    animation: 0.2s ease-in-out both backdrop-fadein;
-    z-index: -1;
-  }
-  .layout-mobile .detailLogo {
-    display: block;
-    left: 6%;
-    top: 20vh;
-  }
-  .layout-mobile .material-icons.detailButton-icon.check,
-  .layout-mobile .material-icons.detailButton-icon.favorite,
-  .layout-mobile .material-icons.detailButton-icon.more_vert,
-  .layout-mobile .material-icons.detailButton-icon.replay,
-  .layout-mobile .material-icons.detailButton-icon.theaters {
-    display: none;
-  }
-  .layout-mobile .btnMoreCommands::after,
-  .layout-mobile .btnPlay::after,
-  .layout-mobile .btnPlayTrailer::after,
-  .layout-mobile .btnPlaystate::after,
-  .layout-mobile .btnReplay::after,
-  .layout-mobile .btnUserRating::after,
-  .layout-mobile .btntheaters::after {
-    content: attr(title);
-  }
-  .layout-mobile .detailButton {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: left;
-    width: auto;
-    margin: 0;
-  }
-  .layout-mobile .detailPagePrimaryContainer {
-    align-content: flex-start;
-    display: flex;
-    z-index: 2;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-  .layout-mobile .mainDetailButtons {
-    width: auto;
-  }
-  .layout-mobile .detailRibbon {
-    background: 0 0;
-    height: unset !important;
-    margin-top: 35vh;
-  }
-  #childrenCollapsible .padded-right {
-    padding-right: 0;
-  }
-  .layout-mobile .trackSelections {
-    max-width: 44em;
-    display: flex;
-    justify-self: flex-start;
-    flex-wrap: wrap;
-  }
+
+/* ==== CARD STYLES ==== */
+.cardBox:hover {
+  transform: translateY(-3px);
 }
-@media only screen and (max-width: 1280px) and (orientation: portrait) {
-  [dir="ltr"] .infoWrapper {
-    padding-left: 1em !important;
-  }
-  [dir="ltr"] .mainDetailButtons {
-    padding-left: 1em !important;
-  }
-  .detailPageContent {
-    padding-left: 2em !important;
-    padding-right: 2em !important;
-  }
-  .layout-mobile .material-icons.detailButton-icon.check,
-  .layout-mobile .material-icons.detailButton-icon.favorite,
-  .layout-mobile .material-icons.detailButton-icon.more_vert,
-  .layout-mobile .material-icons.detailButton-icon.replay,
-  .layout-mobile .material-icons.detailButton-icon.theaters {
-    display: none;
-  }
-  .layout-mobile .btnMoreCommands::after,
-  .layout-mobile .btnPlay::after,
-  .layout-mobile .btnPlayTrailer::after,
-  .layout-mobile .btnPlaystate::after,
-  .layout-mobile .btnReplay::after,
-  .layout-mobile .btnUserRating::after,
-  .layout-mobile .btntheaters::after {
-    content: attr(title);
-  }
-}
-@media (min-width: 0) and (max-width: 1280px) and (orientation: landscape) {
-  [dir="ltr"] .infoWrapper {
-    padding-left: 2.5em !important;
-    padding-top: 5em !important;
-  }
-  [dir="ltr"] .mainDetailButtons {
-    padding-left: 2em !important;
-  }
-  .detailLogo {
-    display: block;
-    left: 6% !important;
-    top: 20vh !important;
-    width: 5em !important;
-  }
-  .detailPageContent {
-    padding-left: 3em !important;
-    padding-right: 0em !important;
-  }
-}
-@media (min-width: 784px) and (max-width: 1280px) and (orientation: landscape) {
-  [dir="ltr"] .infoWrapper {
-    padding-left: 2.5em !important;
-    padding-top: 10em !important;
-  }
-  [dir="ltr"] .mainDetailButtons {
-    padding-left: 2em !important;
-  }
-  .detailPageContent {
-    padding-left: 3em !important;
-    padding-right: 0em !important;
-  }
-  .detailLogo {
-    display: block;
-    left: 6% !important;
-    top: 20vh !important;
-    width: 15em !important;
-  }
-}
-@media only screen and (min-width: 1001px) and (max-width: 1280px) and (orientation: landscape) {
-  [dir="ltr"] .infoWrapper {
-    padding-left: 2.5em !important;
-    padding-top: 5em !important;
-  }
-  [dir="ltr"] .mainDetailButtons {
-    padding-left: 2em !important;
-  }
-  .detailPageContent {
-    padding-left: 3em;
-    padding-right: 0em;
-  }
-  .detailLogo {
-    display: block;
-    left: 6%;
-    top: 20vh;
-    width: 5em;
-  }
-}
-@media only screen and (min-width: 1281px) and (max-width: 1920px) and (orientation: portrait) {
-  [dir="ltr"] .infoWrapper {
-    padding-left: 1em !important;
-  }
-  [dir="ltr"] .mainDetailButtons {
-    padding-left: 1em !important;
-  }
-  .detailPageContent {
-    padding-left: 2em !important;
-    padding-right: 2em !important;
-  }
-  .layout-mobile .material-icons.detailButton-icon.check,
-  .layout-mobile .material-icons.detailButton-icon.favorite,
-  .layout-mobile .material-icons.detailButton-icon.more_vert,
-  .layout-mobile .material-icons.detailButton-icon.replay,
-  .layout-mobile .material-icons.detailButton-icon.theaters {
-    display: none;
-  }
-  .layout-mobile .btnMoreCommands::after,
-  .layout-mobile .btnPlay::after,
-  .layout-mobile .btnPlayTrailer::after,
-  .layout-mobile .btnPlaystate::after,
-  .layout-mobile .btnReplay::after,
-  .layout-mobile .btnUserRating::after,
-  .layout-mobile .btntheaters::after {
-    content: attr(title);
-  }
-}
-@media only screen and (min-width: 1281px) and (max-width: 1920px) and (orientation: landscape) {
-  [dir="ltr"] .infoWrapper {
-    padding-left: 2.5em !important;
-    padding-top: 5em !important;
-  }
-  [dir="ltr"] .mainDetailButtons {
-    padding-left: 2em !important;
-  }
-  .detailPageContent {
-    padding-left: 3em;
-    padding-right: 0em;
-  }
-  .detailLogo {
-    display: block;
-    left: 6%;
-    top: 10vh;
-    width: 25em;
-  }
-}
-@media only screen and (min-width: 1921px) and (max-width: 3840px) and (orientation: landscape) {
-  [dir="ltr"] .infoWrapper {
-    padding-left: 2.5em !important;
-    padding-top: 5em !important;
-  }
-  [dir="ltr"] .mainDetailButtons {
-    padding-left: 2em !important;
-  }
-  .detailPageContent {
-    padding-left: 3em;
-    padding-right: 0em;
-  }
-  .detailLogo {
-    display: block;
-    left: 6%;
-    top: 20vh;
-    width: 25em;
-  }
-}
-@media only screen and (min-width: 3841px) and (orientation: landscape) {
-  [dir="ltr"] .infoWrapper {
-    padding-left: 2.5em !important;
-    padding-top: 5em !important;
-  }
-  [dir="ltr"] .mainDetailButtons {
-    padding-left: 2em !important;
-  }
-  .detailPageContent {
-    padding-left: 3em;
-    padding-right: 0em;
-  }
-  .detailLogo {
-    display: block;
-    left: 6%;
-    top: 20vh;
-    width: 25em;
-  }
+
+/* ==== TABS ==== */
+.headerTabs.sectionTabs {
+  text-size-adjust: 110% !important;
+  font-size: 110% !important;
 }
 
 /* ==== LOGOS ==== */

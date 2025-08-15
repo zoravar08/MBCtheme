@@ -2345,7 +2345,7 @@ fieldset {
 .layout-mobile .listItem-content {
   display: block;
 }
-layout-mobile .detailPagePrimaryContent {
+.layout-mobile .detailPagePrimaryContent {
   position: relative;
 }
 .layout-mobile .detailPagePrimaryContainer {

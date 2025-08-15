@@ -2742,12 +2742,6 @@ layout-mobile .detailPagePrimaryContent {
   transform: translateY(-3px);
 }
 
-
-/* Trigger lift when the card (parent) is hovered */
-.card:hover .cardBox {
-  transform: translateY(-3px);
-}
-
 /* ==== TABS ==== */
 .headerTabs.sectionTabs {
   text-size-adjust: 110% !important;

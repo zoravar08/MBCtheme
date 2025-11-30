@@ -720,16 +720,24 @@ a[href*="anidb.net"] {
   background-position: left;
 }
 .detailRibbon {
-    /* Positional properties */
-    left: 45px;
-    right: 0px;
+    /* Explicitly remove ALL horizontal offsets and padding */
+    margin-left: 45px !important; 
+    left: 0 !important; 
+    padding: 0 !important; 
     
-    /* Corrected Margin property */
+    /* Retain other settings you may want */
+    right: 0px;
     margin-top: 0px; 
-
-    /* Padding overrides the 'padded-left' and 'padded-right' classes */
-    padding-left: 0px; 
-    padding-right: 0px; 
+}
+.layout-desktop .detailRibbon {
+    /* Explicitly remove ALL horizontal offsets and padding */
+    margin-left: 45px !important; 
+    left: 0 !important; 
+    padding: 0 !important; 
+    
+    /* Retain other settings you may want */
+    right: 0px;
+    margin-top: 0px; 
 }
 .itemMiscInfo {
   -webkit-align-items: center;
@@ -783,6 +791,8 @@ a[href*="anidb.net"] {
 }
 .layout-desktop .detailPagePrimaryContent {
   width: 69vw;
+  padding-left: 45px; 
+  padding-bottom: 10px;
 }
 .layout-desktop .detailPagePrimaryContainer {
   display: inline-table;
@@ -847,9 +857,9 @@ a[href*="anidb.net"] {
   color: rgba(var(--darkest));
 }
 .layout-desktop .detailPagePrimaryContainer .mainDetailButtons {
-  margin: 0em 0; /* Keeps the original margin */
-  padding-left: 0px; /* Added from your change */
-  width: 986px; /* Added from your change */
+    margin: 0em 0;
+    padding-left: 0px;
+    width: 985px; /* The new fixed width */
 }
 .layout-desktop div:not(.sectionTitleContainer-cards) > .sectionTitle-cards {
   margin: 0;

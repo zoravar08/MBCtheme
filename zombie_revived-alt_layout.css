@@ -719,6 +719,18 @@ a[href*="anidb.net"] {
   display: block;
   background-position: left;
 }
+.detailRibbon {
+    /* Positional properties */
+    left: 45px;
+    right: 0px;
+    
+    /* Corrected Margin property */
+    margin-top: 0px; 
+
+    /* Padding overrides the 'padded-left' and 'padded-right' classes */
+    padding-left: 0px; 
+    padding-right: 0px; 
+}
 .itemMiscInfo {
   -webkit-align-items: center;
   align-items: center;
@@ -835,7 +847,9 @@ a[href*="anidb.net"] {
   color: rgba(var(--darkest));
 }
 .layout-desktop .detailPagePrimaryContainer .mainDetailButtons {
-  margin: 0em 0;
+  margin: 0em 0; /* Keeps the original margin */
+  padding-left: 0px; /* Added from your change */
+  width: 986px; /* Added from your change */
 }
 .layout-desktop div:not(.sectionTitleContainer-cards) > .sectionTitle-cards {
   margin: 0;

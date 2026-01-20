@@ -137,18 +137,6 @@ body:not(:has(#loginPage:not(.hide))) .skinHeader {
 .layout-mobile .detailImageContainer .card.portraitCard {
   display: none !important;
 }
-#loginPage {
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.5)),
-    url(https://cdn.jsdelivr.net/gh/MakD/zombie-release@main/img/loginImg/login.jpg);
-  background-position: top left;
-  background-size: cover;
-  background-attachment: fixed;
-  animation: 150s infinite alternate backgroundAnimation;
-  z-index: 2;
-  overflow: hidden;
-}
 #loginPage .raised.cancel.block.btnForgotPassword.emby-button {
   display: none;
 }
@@ -1482,9 +1470,6 @@ a[data-role="button"]:hover {
 .css-11vnn2q {
   color: rgba(var(--honey-yellow), 0.85);
 }
-.css-11vnn2q {
-  color: rgba(var(--darkest), 1);
-}
 .css-j733up {
   border-radius: var(--rounding-alt);
 }
@@ -2606,14 +2591,6 @@ fieldset {
   -webkit-transform: none !important;
   transform: none !important;
 }
-.layout-tv .emby-tab-button.show-focus:focus {
-  -webkit-transform: none !important;
-  transform: none !important;
-}
-.layout-tv .emby-tab-button.show-focus:focus {
-  -webkit-transform: none !important;
-  transform: none !important;
-}
 .layout-tv .emby-button.show-focus:focus {
   -webkit-transform: none !important;
   transform: none !important;
@@ -2795,4 +2772,63 @@ fieldset {
 .secondary.listItem-overview.listItemBodyText {
   height: 61px !important;
   margin: 0 !important;
+}
+
+/* ================================
+   Jellyseerr Request Buttons
+================================ */
+
+/* Shared button shape */
+button.jellyseerr-request-button {
+    border-radius: 25px !important;
+}
+
+/* REQUEST button */
+button.jellyseerr-request-button.jellyseerr-button-request {
+    background-color: white !important;
+    color: black !important;
+    border-color: #ccc !important;
+}
+
+button.jellyseerr-request-button.jellyseerr-button-request:hover {
+    background-color: #f2f2f2 !important;
+    color: black !important;
+}
+
+/* AVAILABLE button */
+button.jellyseerr-request-button.jellyseerr-button-available {
+    background-color: #f2b01e !important;
+    color: black !important;
+    border-color: #f2b01e !important;
+}
+
+button.jellyseerr-request-button.jellyseerr-button-available:hover {
+    background-color: #f2b01e !important;
+    color: #f2f2f2 !important;
+}
+
+/* PENDING button */
+button.jellyseerr-request-button.jellyseerr-button-pending {
+    background-color: #b45309 !important;
+    color: black !important;
+    border-color: #b45309 !important;
+}
+
+/* ================================
+   Genre Tags
+================================ */
+
+.genre-tag {
+    background-color: transparent !important;
+    color: #f2b01e !important;
+    border: none !important;
+}
+
+/* ================================
+   Hide Admin-Only Sections
+================================ */
+
+body:not(.is-admin) #jellyfinEnhancedUserPrefsLink,
+body:not(.is-admin) .pluginMenuOptions {
+    display: none !important;
 }

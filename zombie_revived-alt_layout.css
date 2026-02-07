@@ -2828,6 +2828,12 @@ button.jellyseerr-request-button.jellyseerr-button-pending {
    Hide Admin-Only Sections
 ================================ */
 
+/* Hide Jellyfin Enhanced UI section when present */
+.jellyfinEnhancedSection {
+  display: none !important;
+}
+
+
 body:not(.is-admin) #jellyfinEnhancedUserPrefsLink,
 body:not(.is-admin) .pluginMenuOptions {
     display: none !important;

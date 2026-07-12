@@ -2902,3 +2902,12 @@ body:not(.is-admin) .pluginMenuOptions {
 .mbc-user-pill-av { width:28px; height:28px; border-radius:999px; object-fit:cover; display:grid; place-items:center; flex:0 0 auto; }
 .mbc-user-pill-initials { background:rgba(var(--accent,234,170,0),.95); color:#000; font-weight:700; font-size:14px; line-height:28px; }
 .mbc-user-pill-name { font-weight:600; font-size:.9em; max-width:160px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+/* ================================
+   Lift header tabs onto the top header row
+   .emby-tabs-slider lives inside .headerTabs (renders a row below the
+   top header); pull the whole pill up so it lines up with logo/user pill.
+================================ */
+.headerTabs {
+  transform: translateY(-3.3em);
+}

@@ -2975,3 +2975,18 @@ body:not(.is-admin) .pluginMenuOptions {
   align-items: flex-start !important;
   margin-top: 0 !important;   /* cancel the top-right vertical offset */
 }
+/* Genre pins 20% smaller (circle + icon). Plugin: clamp(22,4.5vw,30). */
+.genre-tag {
+  height: clamp(18px, 3.6vw, 24px) !important;
+  width:  clamp(18px, 3.6vw, 24px) !important;
+}
+.genre-tag .material-symbols-outlined {
+  font-size: clamp(0.8em, 2.24vw, 1.12em) !important;
+}
+.layout-mobile .genre-tag {
+  height:    clamp(16px, 3.2vw, 21px) !important;
+  min-width: clamp(16px, 3.2vw, 21px) !important;
+}
+.layout-mobile .genre-tag .material-symbols-outlined {
+  font-size: clamp(0.76em, 1.92vw, 1em) !important;
+}

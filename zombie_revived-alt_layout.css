@@ -2915,7 +2915,7 @@ body:not(.is-admin) .pluginMenuOptions {
 @media (min-width: 870px) {
   .headerTabs {
     position: absolute;
-    top: 0;
+    top: 0.4em;
     left: 50%;
     transform: translateX(-50%) scale(0.85);
     transform-origin: center;

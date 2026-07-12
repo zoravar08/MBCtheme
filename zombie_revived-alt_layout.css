@@ -2838,3 +2838,23 @@ body:not(.is-admin) #jellyfinEnhancedUserPrefsLink,
 body:not(.is-admin) .pluginMenuOptions {
     display: none !important;
 }
+/* ================================
+   Greyscale Home Sections
+   Continue Watching, Recently Added Movies/Shows, Next Up, etc.
+   Library/folder tiles use .homeLibraryButton (no .cardImageContainer) -> excluded.
+   Full color restored on hover/focus.
+================================ */
+.homeSectionsContainer .cardImageContainer,
+.homeSectionsContainer .cardImage,
+.homeSectionsContainer .cardText {
+  filter: grayscale(1) !important;
+  transition: filter .3s ease;
+}
+.homeSectionsContainer .card:hover .cardImageContainer,
+.homeSectionsContainer .card:hover .cardImage,
+.homeSectionsContainer .card:hover .cardText,
+.homeSectionsContainer .card:focus .cardImageContainer,
+.homeSectionsContainer .card:focus .cardImage,
+.homeSectionsContainer .card:focus .cardText {
+  filter: grayscale(0) !important;
+}

@@ -2940,3 +2940,28 @@ body:not(.is-admin) .pluginMenuOptions {
 @media (max-width: 869px) {
   .headerTabs { margin-top: 0.4em !important; }
 }
+
+/* ================================
+   Card / poster progress bar — slimmer
+   Core theme: 10px (mobile 8px, tv 20px). Trim for a lighter look.
+================================ */
+.itemProgressBar { height: 6px !important; border-radius: 30px !important; }
+.layout-mobile .itemProgressBar { height: 4px !important; }
+.layout-tv .itemProgressBar { height: 10px !important; }
+
+/* ================================
+   Genre pins on posters (Jellyfin Enhanced .genre-tag)
+   Enhanced ships a flat rgba(10,10,10,.85) chip w/ no blur. Give it a
+   frosted-glass look so the label reads over any poster art.
+================================ */
+.genre-overlay-container .genre-tag,
+.genre-tag {
+  background: rgba(12,12,12,.55) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(140%) !important;
+  backdrop-filter: blur(8px) saturate(140%) !important;
+  border: 1px solid rgba(255,255,255,.14) !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,.5) !important;
+}
+.genre-tag .genre-text, .genre-text {
+  text-shadow: 0 1px 3px rgba(0,0,0,.9) !important;
+}

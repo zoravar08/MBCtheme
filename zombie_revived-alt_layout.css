@@ -2904,15 +2904,29 @@ body:not(.is-admin) .pluginMenuOptions {
 .mbc-user-pill-name { font-weight:600; font-size:.9em; max-width:160px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 
 /* ================================
-   Lift header tabs onto the top header row
-   .emby-tabs-slider lives inside .headerTabs (renders a row below the
-   top header); pull the whole pill up so it lines up with logo/user pill.
+   Header tabs alignment (responsive)
+   Core lifts .headerTabs with margin-top:-4.3em (clipped by .skinHeader
+   contain:paint). Desktop (>=870px): pin the pill inline, centered, scaled
+   to ~headerRight. Small screens (<870px): drop it to its own row so it
+   never overlaps the logo/user pill.
 ================================ */
-.headerTabs {
-  transform: translateY(-3.3em);
+.skinHeader { contain: none !important; }
+
+@media (min-width: 870px) {
+  .headerTabs {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0.85);
+    transform-origin: center;
+    margin: 0 !important;
+    height: 3.5em;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+  }
 }
 
-/* Collapse the empty space left under the lifted tabs (shrinks header) */
-.headerTabs {
-  margin-bottom: -2.8em;
+@media (max-width: 869px) {
+  .headerTabs { margin-top: 0.4em !important; }
 }

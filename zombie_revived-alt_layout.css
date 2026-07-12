@@ -2965,3 +2965,13 @@ body:not(.is-admin) .pluginMenuOptions {
 .genre-tag .genre-text, .genre-text {
   text-shadow: 0 1px 3px rgba(0,0,0,.9) !important;
 }
+/* Force genre pins to top-left regardless of the plugin's (per-user) position
+   setting. Enhanced sets top/left/right/bottom via a non-important rule. */
+.genre-overlay-container {
+  top: 6px !important;
+  left: 6px !important;
+  right: auto !important;
+  bottom: auto !important;
+  align-items: flex-start !important;
+  margin-top: 0 !important;   /* cancel the top-right vertical offset */
+}

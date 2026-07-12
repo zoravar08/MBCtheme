@@ -2874,10 +2874,20 @@ body:not(.is-admin) .pluginMenuOptions {
   -webkit-backdrop-filter: blur(20px) saturate(140%) !important;
   backdrop-filter: blur(20px) saturate(140%) !important;
 }
-.dialog, .formDialogContent, .actionSheetContent, .actionsheet, .actionSheetMenu, .dialogContainer .focuscontainer {
-  background-color: rgba(22,22,22,.7) !important;
+/* glass only on the outer modal panel; inner content stays transparent
+   so translucent layers don't stack and darken. */
+.dialog, .formDialog, .dialog-fixedSize,
+.actionSheet,
+.dialogContainer .focuscontainer {
+  background-color: rgba(22,22,22,.6) !important;
   -webkit-backdrop-filter: blur(24px) saturate(140%) !important;
   backdrop-filter: blur(24px) saturate(140%) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  box-shadow: 0 8px 40px rgba(0,0,0,.5) !important;
+}
+.formDialogContent, .dialogContentInner,
+.actionSheetContent, .actionSheetScroller, .actionSheetMenu {
+  background-color: transparent !important;
 }
 .nowPlayingBar {
   background-color: rgba(18,18,18,.55) !important;

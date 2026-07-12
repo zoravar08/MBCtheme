@@ -2911,3 +2911,8 @@ body:not(.is-admin) .pluginMenuOptions {
 .headerTabs {
   transform: translateY(-3.3em);
 }
+
+/* Collapse the empty space left under the lifted tabs (shrinks header) */
+.headerTabs {
+  margin-bottom: -2.8em;
+}
